@@ -1,4 +1,3 @@
-Updated Database Creation
 CREATE DATABASE userdb;
 USE userdb;
 
@@ -69,4 +68,5 @@ CREATE TABLE OrderDetails (
     Subtotal DECIMAL(10,2) GENERATED ALWAYS AS (Quantity * ItemPrice) STORED,
     FOREIGN KEY (OrderID) REFERENCES orders(id),
     FOREIGN KEY (ProductID) REFERENCES BakeryProducts(ProductID)
+
 );
